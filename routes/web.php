@@ -22,14 +22,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/listing/{id}', function ($id) {
-    $listing = Listing::find($id);
-    if($listing){
-        return view('listing', [
-            'listings' => $listing
-        ]);
-    } else{
-        abort(404);
-    }
-    
+Route::get('/listing/{listing}', function (Listing $listing) {
+    return view('listing', [
+        'listings' => $listing
+    ]);
 });
