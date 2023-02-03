@@ -29,4 +29,4 @@
             </div>
         </x-card>
     </div>
-<x-layout>
+</x-layout>
