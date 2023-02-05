@@ -9,7 +9,7 @@
 
                 <h3 class="text-2xl mb-2">{{$listings->title}}</h3>
                 <div class="text-xl font-bold mb-4">{{$listings->company}}</div>
-                <x-listing-tag :tagsCsv="$listings->tag" />
+                <x-listing-tag :tagsCsv="$listings->tags" />
                 <div class="text-lg my-4">
                     <i class="fa-solid fa-location-dot"></i> {{$listings->location}}
                 </div>
