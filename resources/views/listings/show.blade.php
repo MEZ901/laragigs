@@ -5,7 +5,7 @@
     <div class="mx-4">
         <x-card class="p-4">
             <div class="flex flex-col items-center justify-center text-center" >
-                <img class="w-48 mr-6 mb-6" src="{{asset('images/no-image.png')}}" alt="" />
+                <img class="w-48 mr-6 mb-6" src="{{$listings->logo ? asset('storage/' . $listings->logo) : asset('images/no-image.png')}}" alt="" />
 
                 <h3 class="text-2xl mb-2">{{$listings->title}}</h3>
                 <div class="text-xl font-bold mb-4">{{$listings->company}}</div>
