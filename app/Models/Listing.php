@@ -22,4 +22,8 @@ class Listing extends Model
                   ->orWhere('tag', 'like', '%' . request('search') . '%');
         }
     }
+
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
