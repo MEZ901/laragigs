@@ -14,14 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// All listings
+// All Listings
 Route::get('/', [ListingController::class, 'index']);
 
-// Show create form
+// Show Create Form
 Route::get('/listing/create', [ListingController::class, 'create']);
 
-// Store listing data
+// Store Listing Data
 Route::post('/listing', [ListingController::class, 'store']);
 
-// Single listing
+// Show Edit Form
+Route::get('/listing/{listing}/edit', [ListingController::class, 'edit']);
+
+// Update Listing
+Route::put('/listing/{listing}', [ListingController::class, 'update']);
+
+// Single Listing
 Route::get('/listing/{listing}', [ListingController::class, 'show']);
