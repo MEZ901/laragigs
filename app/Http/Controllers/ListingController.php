@@ -33,6 +33,7 @@ class ListingController extends Controller
             'email' => ['required', 'email'],
             'description' => 'required',
         ]);
+        $formFields['user_id'] = auth()->id();
         $formFields['tags'] = $request->tags ?: null;
         if ($request->hasFile('logo')) $formFields['logo'] = $request->file('logo')->store('logos', 'public');
 
